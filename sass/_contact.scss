@@ -1,0 +1,63 @@
+.contact {
+    background: url(../images/accent_bottom_wave_01.png) bottom no-repeat;
+
+    &__content {
+        padding: 25px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__form {
+        position: relative;
+        margin-bottom: 20px;
+
+        .form-control {
+            padding: 12px 12px 12px 42px;
+            border-radius: 30px;
+        }
+
+        .form-control:focus {
+            border-color: #abb8c3;
+            box-shadow: none;
+        }
+    }
+
+    &__icon {
+        color: $main-color;
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+    }
+
+    .textarea__icon {
+        color: $main-color;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+    }
+
+    &__button {
+        box-shadow: 0 0 0 3em $main-color inset;
+        padding: 12px 48px;
+        border-radius: 50px;
+        color: #fff;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__button:hover {
+        border-color: transparent;
+        color: $main-color;
+        box-shadow: 0 0 0 1px $main-color inset;
+    }
+
+}

@@ -1,0 +1,106 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+
+    .navbar {
+        .navbar-collapse {
+            flex-grow: 0;
+        }
+
+        .nav__logo-img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .nav-link {
+            color: $text-color;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 50px;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            bottom: 0px;
+            left: 50%;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            background-color: $main-color;
+            transition: 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: $main-color;
+        }
+
+        .nav-link:hover::after {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        .nav__contact {
+            margin-left: 50px;
+
+            &-phone {
+                padding: 15px 20px;
+                box-shadow: 0 0 0 3em $main-color inset;
+                border-radius: 100px;
+                color: #fff;
+                transition: 0.3s ease;
+                text-decoration: none;
+            }
+
+            &-phone:hover {
+                box-shadow: 0 0 0 1px $main-color inset;
+                color: $main-color;
+            }
+
+            .social-link {
+                font-size: 18px;
+                margin-left: 10px;
+                transition: 0.3s ease;
+                text-decoration: none;
+                color: $text-color;
+            }
+
+            &-social:hover {
+                color: $main-color;
+            }
+        }
+
+
+
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-link,
+    .nav__contact {
+        margin-left: 0;
+    }
+
+    .nav__contact {
+        padding-bottom: 32px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}
+
+.show-background {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 25px 20px -20px;
+}
